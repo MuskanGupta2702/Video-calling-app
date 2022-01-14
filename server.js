@@ -7,7 +7,7 @@ const { ExpressPeerServer } = require("peer");
 const peerServer = ExpressPeerServer(server, { debug : true});
 
 const hostname = '127.0.0.1';
-const port = 8080;
+const port = 8080 || process.env.PORT;
 
 app.use('/peerjs', peerServer);
 
