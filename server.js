@@ -3,13 +3,13 @@ const app = express();
 const server = require("http").Server(app);
 const io = require('socket.io')(server);
 const {v4: uuidv4} = require("uuid");
-const { ExpressPeerServer } = require("peer");
-const peerServer = ExpressPeerServer(server, { debug : true});
+// const { ExpressPeerServer } = require("peer");
+// const peerServer = ExpressPeerServer(server, { debug : true});
 
 const hostname = '127.0.0.1';
-const port = 8080 || process.env.PORT;
+const port = process.env.PORT || 8080;;
 
-app.use('/peerjs', peerServer);
+// app.use('/peerjs', peerServer);
 
 // For serving Public files
 app.use(express.static('public'))
