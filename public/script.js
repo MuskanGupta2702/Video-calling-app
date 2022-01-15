@@ -55,8 +55,8 @@ navigator.mediaDevices.getUserMedia({ //It takes object
 
     socket.on('createMessage', message => {
         console.log("This is comming from from server " + message);
-        $("ul").append(`<li class="message"><b>user</b><br/>${message}</li>`);
-        // scrollToBottom();
+        $("ul").append(`<li class="message"><b>user</b><br>${message}</li>`);
+        scrollToBottom();
     })
 })
 
